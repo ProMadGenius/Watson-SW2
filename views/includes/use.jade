@@ -1,0 +1,22 @@
+div._demo--container
+  include ../mixins/sampleInput.jade
+
+  h2.base--h2.use--header Prueba de Reconocimiento en Imagenes
+  div Escoja una imagen o suba una imagen propia para probar el Reconocimiento Visual.
+  +sampleInput('use')
+
+  .loading.use--loading.display-none
+    .loader-container
+      svg.loader(viewBox='25 25 50 50')
+        circle.loader__path(cx='50', cy='50', r='20')
+    p.base--p.use--loading-message.loading--message Watson esta clasificando la imagen, para determinar una coincidencia...
+  .error.use--error.display-none
+    img.use--error-image.error--image(src='images/icons/alert.svg')
+    p.base--p.use--error-message.error--message Reconocimiento Visual no esta disponible en este momento... :'v
+  .use--output.display-none
+    h2.base--h2.use--output-header Watson ve...
+    .use--output-row
+      .use--output-image-container
+        img.use--output-image
+      #box.boxes
+      .use--output-data

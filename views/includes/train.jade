@@ -1,0 +1,210 @@
+._train
+  .gray-overlay.gray-overlay_visible
+  div._demo--container
+    ._container--training
+      h1.base--h2.use--header Entrenar un clasificador
+      div
+        | Para crear un clasificador temporal, selecciona al menos 3 tipos de paquetes de imagenes.
+      h2 Ejemplo de paquetes de imagenes
+      ._training--examples
+        ._training--example.clickable(data-kind='dogs')
+          h3 Razas de Perros
+          img(src='/images/bundles/dogs/thumbnail.jpg')
+        ._training--example.clickable(data-kind='moleskine')
+          h3 Productos de Moleskine
+          img(src='/images/bundles/moleskine/thumbnail.jpg')
+        ._training--example.clickable(data-kind='insurance')
+          h3 Accidentes
+          img(src='/images/bundles/insurance/thumbnail.jpg')
+        ._training--example.clickable(data-kind='omniearth')
+          h3 Imagenes Satelitales
+          img(src='/images/bundles/omniearth/thumbnail.png')
+        ._training--example.clickable(data-kind='user')
+          h3 Usar uno propio
+          ._training--use-your-own.square
+            ._training--use-your-own-plus +
+
+  ._examples(data-kind="user")
+    .user-submitted
+      form#user_upload.upload.training_dropzone
+        div._demo--container
+          input(type="hidden",name="classifiername",value="")
+          .positive
+            h2 Clases positivas
+            p.text Sube tu propio pack de imagenes en un archivo zip en los espacios de abajo. <br/> El archivo ZIP no debe sobrepasar los 5Mb.
+            .classifiers
+              .classifier(data-hasfile=0,data-idx=0)
+                .text
+                  span.text-label
+                    a.base--a(href="#") Selecciona
+                    |  o arrastre un archivo zip con al menos 50 imagenes
+                  img.text-zip-image(src="images/VR zip icon.svg")
+                input(type="file",name="classupload",accept="application/zip")
+                input.base--input(type="text",name="classname",placeholder="Nombre de esta clase")
+                a(href="").base--a.clear_link Limpiar
+              .classifier(data-hasfile=0,data-idx=1)
+                .text
+                  span.text-label
+                    a.base--a(href="#") Selecciona
+                    |  o arrastre un archivo zip con al menos 50 imagenes
+                  img.text-zip-image(src="images/VR zip icon.svg")
+                input(type="file",name="classupload",accept="application/zip")
+                input.base--input(type="text",name="classname",placeholder="Nombre de esta clase")
+                a(href="").base--a.clear_link Limpiar
+              .classifier(data-hasfile=0,data-idx=2)
+                .text
+                  span.text-label
+                    a.base--a(href="#") Selecciona
+                    |  o arrastre un archivo zip con al menos 50 imagenes
+                  img.text-zip-image(src="images/VR zip icon.svg")
+                input(type="file",name="classupload",accept="application/zip")
+                input.base--input(type="text",name="classname",placeholder="Nombre de esta clase")
+                a(href="").base--a.clear_link Limpiar
+          .seperator
+          .negative
+            h2.negative-header Clases negativas opcionales
+            .classifiers
+              .classifier(data-hasfile=0,data-idx=3).negative
+                .text
+                  span.text-label
+                    a.base--a(href="#") Selecciona
+                    |  o arrastre un archivo zip con al menos 50 imagenes
+                  img.text-zip-image(src="images/VR zip icon.svg")
+                input(type="hidden",name="classname",value="negative")
+                input(type="file",name="negativeclassupload",accept="application/zip")
+                a(href="").base--a.clear_link Limpiar
+                p Usa imagenes que se pueden parecer a los del pack pero son diferentes en realidad.
+
+
+  div._demo--container
+    ._examples(data-kind='dogs')
+      a.select_all(data-kind='dogs') Seleccionar Todos
+      ._examples--classes
+        ._examples--class._positive(data-name='goldenretriever', data-kind='dogs', data-realname='Golden Retriever')
+          h4 Golden Retriever
+          img(src='/images/bundles/dogs/goldenretriever-thumbnail.jpg', data-kind='dogs', data-name='goldenretriever')
+          button._positive(data-name='goldenretriever') Seleccionar
+        ._examples--class._positive(data-name='husky', data-kind='dogs', data-realname='Husky')
+          h4 Siberiano
+          img(src='/images/bundles/dogs/husky-thumbnail.jpg', data-kind='dogs', data-name='husky')
+          button._positive(data-name='husky') Seleccionar
+        ._examples--class._positive(data-name='dalmatian', data-kind='dogs', data-realname='Dalmatian')
+          h4 Dalmata
+          img(src='/images/bundles/dogs/dalmatian-thumbnail.jpg', data-kind='dogs', data-name='dalmatian')
+          button._positive(data-name='dalmatian') Seleccionar
+        ._examples--class._positive(data-name='beagle', data-kind='dogs', data-realname='Beagle')
+          h4 Beagle
+          img(src='/images/bundles/dogs/beagle-thumbnail.jpg', data-kind='dogs', data-name='beagle')
+          button._positive(data-name='beagle') Seleccionar
+        ._examples--class._negative(data-name='negatives', data-kind='dogs')
+          h4 Negativos:
+            br
+            | No son perros
+          img(src='/images/bundles/dogs/negatives-thumbnail.jpg', data-kind='dogs', data-name='negatives')
+          button._negative(data-name='negatives') Seleccionar
+      ._examples--contact-sheet(data-kind='dogs')
+        img
+    ._examples(data-kind='insurance')
+      a.select_all(data-kind='insurance') Seleccionar Todos
+      ._examples--classes
+        ._examples--class._positive(data-name='brokenwinshield', data-kind='insurance', data-realname='Broken Windshield')
+          h4 Broken Windshield
+          img(src='/images/bundles/insurance/brokenwinshield-thumbnail.jpg', data-kind='insurance', data-name='brokenwinshield')
+          button._positive(data-name='brokenwinshield') Seleccionar
+        ._examples--class._positive(data-name='flattire', data-kind='insurance', data-realname='Flat Tire')
+          h4 Flat Tire
+          img(src='/images/bundles/insurance/flattire-thumbnail.jpg', data-kind='insurance', data-name='flattire')
+          button._positive(data-name='flattire') Seleccionar
+        ._examples--class._positive(data-name='motorcycleaccident', data-kind='insurance', data-realname='Motorcycle Involved')
+          h4 Motorcycle Involved
+          img(src='/images/bundles/insurance/motorcycleaccident-thumbnail.jpg', data-kind='insurance', data-name='motorcycleaccident')
+          button._positive(data-name='motorcycleaccident') Seleccionar
+        ._examples--class._positive(data-name='vandalism', data-kind='insurance', data-realname='Vandalism')
+          h4 Vandalismo
+          img(src='/images/bundles/insurance/vandalism-thumbnail.jpg', data-kind='insurance', data-name='vandalism')
+          button._positive(data-name='vandalism') Seleccionar
+        ._examples--class._negative(data-name='negatives', data-kind='insurance')
+          h4 Vehiculos sin daños
+          img(src='/images/bundles/insurance/negatives-thumbnail.jpg', data-kind='insurance', data-name='negatives')
+          button._negative(data-name='negatives') Seleccionar
+      ._examples--contact-sheet(data-kind='insurance')
+        img
+    ._examples(data-kind='moleskine')
+      a.select_all(data-kind='moleskine') Seleccionar Todos
+      ._examples--classes
+        ._examples--class._positive(data-name='journaling', data-kind='moleskine', data-realname='Journaling')
+          h4 Journaling
+          img(src='/images/bundles/moleskine/journaling-thumbnail.jpg', data-kind='moleskine', data-name='journaling')
+          button._positive(data-name='journaling') Seleccionar
+        ._examples--class._positive(data-name='landscape', data-kind='moleskine', data-realname='Landscape')
+          h4 Landscape
+          img(src='/images/bundles/moleskine/landscape-thumbnail.jpg', data-kind='moleskine', data-name='landscape')
+          button._positive(data-name='landscape') Seleccionar
+        ._examples--class._positive(data-name='notebook', data-kind='moleskine', data-realname='Notebook')
+          h4 Notebook
+          img(src='/images/bundles/moleskine/notebook-thumbnail.jpg', data-kind='moleskine', data-name='notebook')
+          button._positive(data-name='notebook') Seleccionar
+        ._examples--class._positive(data-name='portrait', data-kind='moleskine', data-realname='Portrait')
+          h4 Portrait
+          img(src='/images/bundles/moleskine/portrait-thumbnail.jpg', data-kind='moleskine', data-name='portrait')
+          button._positive(data-name='portrait') Seleccionar
+        ._examples--class._negative(data-name='negative', data-kind='moleskine')
+          h4 Negative:
+            br
+            | Non-Moleskine
+          img(src='/images/bundles/moleskine/negative-thumbnail.jpg', data-kind='moleskine', data-name='negative')
+          button._negative(data-name='negative') Seleccionar
+      ._examples--contact-sheet(data-kind='moleskine')
+        img
+      .license Images courtesy of IBM Watson partner 
+        a(class="base--a", href='http://www.moleskine.com/us/', target='_blank') Moleskine.
+    ._examples(data-kind='omniearth')
+      a.select_all(data-kind='omniearth') Seleccionar Todos
+      ._examples--classes
+        ._examples--class._positive(data-name='baseball', data-kind='omniearth', data-realname='Baseball')
+          h4 Baseball
+          img(src='/images/bundles/omniearth/baseball-thumbnail.jpg', data-kind='omniearth', data-name='baseball')
+          button._positive(data-name='baseball') Seleccionar
+        ._examples--class._positive(data-name='cars', data-kind='omniearth', data-realname='Cars')
+          h4 Carros
+          img(src='/images/bundles/omniearth/cars-thumbnail.jpg', data-kind='omniearth', data-name='cars')
+          button._positive(data-name='cars') Seleccionar
+        ._examples--class._positive(data-name='golf', data-kind='omniearth', data-realname='Golf')
+          h4 Golf
+          img(src='/images/bundles/omniearth/golf-thumbnail.jpg', data-kind='omniearth', data-name='golf')
+          button._positive(data-name='golf') Seleccionar
+        ._examples--class._positive(data-name='tennis', data-kind='omniearth', data-realname='Tennis')
+          h4 Tenis
+          img(src='/images/bundles/omniearth/tennis-thumbnail.jpg', data-kind='omniearth', data-name='tennis')
+          button._positive(data-name='tennis') Seleccionar
+      ._examples--contact-sheet(data-kind='omniearth')
+        img
+      .license Images courtesy of IBM Watson partner 
+        a(class="base--a", href='http://omniearth.net/' target='_blank') OmniEarth.
+    .train--row
+      #formStateErrorMessage
+      input.base--input._examples--input-name(type='text', placeholder='Name this class',required)
+      .train--column-1
+        button.train--train-button.base--button(disabled='true') Train your classifier
+        .license
+          | Esta es una demostración no te emociones &nbsp;
+          a.base--a(href='http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/visual-recognition/', target='_balnk') API
+          span .
+      .train--column-2
+        .icon-hyperlink.train--reset
+          span.icon.icon-reset
+          button.base--a.train--reset-button.icon-hyperlink--button.icon-hyperlink--button_BLANK(type='reset')
+            | Reiniciar
+    .license
+      | Las imágenes utilizadas en esta demo están licenciadas bajo Creative Commons 2.0 &nbsp;
+      a.base--a(href='https://github.com/watson-developer-cloud/visual-recognition-nodejs/tree/master/attributions', target='_blank') aquí
+      | .
+    .loading.train--loading
+      .loader-container
+        svg.loader(viewBox='25 25 50 50')
+          circle.loader__path(cx='50', cy='50', r='20')
+      p.base--p.loading--message Watson está entrenando a su nuevo clasificador. 
+      p.base--p.loading--message Esto puede tomar hasta 3-4 minutos basado en el número de imágenes.
+    .error.train--error
+      img.train--error-image.error--image(src='images/icons/alert.svg')
+      p.base--p.train--error-message.error--message Reconocimiento visual no está disponible ahora...

@@ -1,0 +1,43 @@
+.train--trained-successfully
+  img(src="/images/watson-logo-white.svg", alt="watson logo")
+  .train--trained-successfully-text Tu programa clasificador ha sido entrenado exitosamente.
+.test--section
+  hr.base--hr.retraining--base-hr
+  ._demo--container
+    h2.base--h2.test--classifier
+    .icon-hyperlink.test--reset
+      span.icon.icon-reset
+      button(title='Deletes the created classifier', type='reset').test--reset-button.base--a.icon-hyperlink--button.icon-hyperlink--button_BLANK.reset--classifier
+        | Reiniciar
+    p.base--p.test--description Pon a prueba tu reciente clasificador con imagenes similares que no estan en el Set de imagenes predefinidos.
+    a.base--a.test--random-test-image(href="#") Usa imagen de prueba
+    form(id='test--fileupload', class='test--form test--dropzone', data-upload-template-id='template-upload-test')
+      input(id='test_classifier_id', type='hidden', name='classifier_id')
+      div(class='test--url')
+        div.test--invalid-url.display-none URL invalida lince
+        div.test--invalid-image-url.display-none La URL debe terminar con: .JPG, .GIF, or .PNG.
+        input(class='test--url-input base--input', type='text', placeholder='O pega la URL de la imagen', name='url')
+        input(class='test--image-data-input base--input', type='hidden', name='image_data')
+      div(class='test--dropzone')
+        label(class='test--file-input-button base--button', for='test--file')
+          div(class='test--file-input-button-big-plus')
+          | O 
+          span.base--a selecciona
+          span.test--file-input-button-drag-text  o jalalo aquí
+          |  tu propia imagen
+        input(id='test--file', class='test--file-input', type='file', name='images_file', accept='image/x-png, image/jpg, image/gif, image/jpeg, image/png', title='Choose an image to upload')
+    .loading.test--loading.display-none
+      .loader-container
+        svg.loader(viewBox='25 25 50 50')
+          circle.loader__path(cx='50', cy='50', r='20')
+      p.base--p.test--loading-message.loading--message Watson esta clasificando la imagen, para determinar una coincidencia...
+    .error.test--error.display-none
+      img.test--error-image.error--image(src='/images/icons/alert.svg')
+      p.base--p.test--error-message.error--message Reconocimiento Visual no esta disponible en este momento... :'v
+    .test--output.test--output-row.display-none
+      .test--output-left
+        .test--output-image-container
+          img.test--output-image.landscape
+      .test--output-right.test--output-data
+  hr.base--hr.retraining--base-hr
+  ._demo--container#retrain--form
