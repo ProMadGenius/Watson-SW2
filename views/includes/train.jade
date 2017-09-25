@@ -2,23 +2,21 @@
   .gray-overlay.gray-overlay_visible
   div._demo--container
     ._container--training
-      h1.base--h2.use--header Entrenar un clasificador
+      h1.base--h2.use--header Seguridad e Inspección de equipaje en Aeropuertos
       div
-        | Para crear un clasificador temporal, selecciona al menos 3 tipos de paquetes de imagenes.
-      h2 Ejemplo de paquetes de imagenes
+        | Los objetos no permitidos dentro de un Aeropuerto se clasifican en 4 grupos.
+      h2 Grupos de Objetos no Permitidos en un Aeropuerto
       ._training--examples
+        ._training--example.clickable(data-kind='explosivos')
+          h3 Explosivos
+          img(src='/images/bundles/explosivos/explosivos.jpg')
+
+        ._training--example.clickable(data-kind='gases')
+          h3 Gases
+          img(src='/images/bundles/gases-comprimidos/gases-comprimidos.jpg')
         ._training--example.clickable(data-kind='dogs')
           h3 Razas de Perros
           img(src='/images/bundles/dogs/thumbnail.jpg')
-        ._training--example.clickable(data-kind='moleskine')
-          h3 Productos de Moleskine
-          img(src='/images/bundles/moleskine/thumbnail.jpg')
-        ._training--example.clickable(data-kind='insurance')
-          h3 Accidentes
-          img(src='/images/bundles/insurance/thumbnail.jpg')
-        ._training--example.clickable(data-kind='omniearth')
-          h3 Imagenes Satelitales
-          img(src='/images/bundles/omniearth/thumbnail.png')
         ._training--example.clickable(data-kind='user')
           h3 Usar uno propio
           ._training--use-your-own.square
@@ -104,83 +102,75 @@
           button._negative(data-name='negatives') Seleccionar
       ._examples--contact-sheet(data-kind='dogs')
         img
-    ._examples(data-kind='insurance')
-      a.select_all(data-kind='insurance') Seleccionar Todos
+    
+    
+    ._examples(data-kind='explosivos')
+      a.select_all(data-kind='explosivos') Seleccionar Todos
       ._examples--classes
-        ._examples--class._positive(data-name='brokenwinshield', data-kind='insurance', data-realname='Broken Windshield')
-          h4 Broken Windshield
-          img(src='/images/bundles/insurance/brokenwinshield-thumbnail.jpg', data-kind='insurance', data-name='brokenwinshield')
-          button._positive(data-name='brokenwinshield') Seleccionar
-        ._examples--class._positive(data-name='flattire', data-kind='insurance', data-realname='Flat Tire')
-          h4 Flat Tire
-          img(src='/images/bundles/insurance/flattire-thumbnail.jpg', data-kind='insurance', data-name='flattire')
-          button._positive(data-name='flattire') Seleccionar
-        ._examples--class._positive(data-name='motorcycleaccident', data-kind='insurance', data-realname='Motorcycle Involved')
-          h4 Motorcycle Involved
-          img(src='/images/bundles/insurance/motorcycleaccident-thumbnail.jpg', data-kind='insurance', data-name='motorcycleaccident')
-          button._positive(data-name='motorcycleaccident') Seleccionar
-        ._examples--class._positive(data-name='vandalism', data-kind='insurance', data-realname='Vandalism')
-          h4 Vandalismo
-          img(src='/images/bundles/insurance/vandalism-thumbnail.jpg', data-kind='insurance', data-name='vandalism')
-          button._positive(data-name='vandalism') Seleccionar
-        ._examples--class._negative(data-name='negatives', data-kind='insurance')
-          h4 Vehiculos sin daños
-          img(src='/images/bundles/insurance/negatives-thumbnail.jpg', data-kind='insurance', data-name='negatives')
-          button._negative(data-name='negatives') Seleccionar
-      ._examples--contact-sheet(data-kind='insurance')
-        img
-    ._examples(data-kind='moleskine')
-      a.select_all(data-kind='moleskine') Seleccionar Todos
-      ._examples--classes
-        ._examples--class._positive(data-name='journaling', data-kind='moleskine', data-realname='Journaling')
-          h4 Journaling
-          img(src='/images/bundles/moleskine/journaling-thumbnail.jpg', data-kind='moleskine', data-name='journaling')
-          button._positive(data-name='journaling') Seleccionar
-        ._examples--class._positive(data-name='landscape', data-kind='moleskine', data-realname='Landscape')
-          h4 Landscape
-          img(src='/images/bundles/moleskine/landscape-thumbnail.jpg', data-kind='moleskine', data-name='landscape')
-          button._positive(data-name='landscape') Seleccionar
-        ._examples--class._positive(data-name='notebook', data-kind='moleskine', data-realname='Notebook')
-          h4 Notebook
-          img(src='/images/bundles/moleskine/notebook-thumbnail.jpg', data-kind='moleskine', data-name='notebook')
-          button._positive(data-name='notebook') Seleccionar
-        ._examples--class._positive(data-name='portrait', data-kind='moleskine', data-realname='Portrait')
-          h4 Portrait
-          img(src='/images/bundles/moleskine/portrait-thumbnail.jpg', data-kind='moleskine', data-name='portrait')
-          button._positive(data-name='portrait') Seleccionar
-        ._examples--class._negative(data-name='negative', data-kind='moleskine')
-          h4 Negative:
+        ._examples--class._positive(data-name='armas', data-kind='explosivos', data-realname='armas')
+          h4 Armas
+          img(src='/images/bundles/explosivos/armas-img.jpg', data-kind='explosivos', data-name='armas')
+          button._positive(data-name='armas') Seleccionar
+
+        ._examples--class._positive(data-name='explosivos', data-kind='explosivos', data-realname='explosivos')
+          h4 Explosivos
+          img(src='/images/bundles/explosivos/explosivos-img.jpg', data-kind='explosivos', data-name='explosivos')
+          button._positive(data-name='explosivos') Seleccionar
+
+        ._examples--class._positive(data-name='granadas', data-kind='explosivos', data-realname='granadas')
+          h4 Granadas
+          img(src='/images/bundles/explosivos/granadas-img.jpg', data-kind='explosivos', data-name='granadas')
+          button._positive(data-name='granadas') Seleccionar
+
+        ._examples--class._positive(data-name='pirotecnico', data-kind='explosivos', data-realname='pirotecnico')
+          h4 Pirotécnicos
+          img(src='/images/bundles/explosivos/pirotecnico-img.png', data-kind='explosivos', data-name='pirotecnico')
+          button._positive(data-name='pirotecnico') Seleccionar
+
+        ._examples--class._negative(data-name='negatives', data-kind='explosivos')
+          h4 Negativos:
             br
-            | Non-Moleskine
-          img(src='/images/bundles/moleskine/negative-thumbnail.jpg', data-kind='moleskine', data-name='negative')
-          button._negative(data-name='negative') Seleccionar
-      ._examples--contact-sheet(data-kind='moleskine')
+            | No son Explosivos
+          img(src='/images/bundles/explosivos/explosivos-no.jpg', data-kind='explosivos', data-name='negatives')
+          button._negative(data-name='negatives') Seleccionar
+      ._examples--contact-sheet(data-kind='explosivos')
         img
-      .license Images courtesy of IBM Watson partner 
-        a(class="base--a", href='http://www.moleskine.com/us/', target='_blank') Moleskine.
-    ._examples(data-kind='omniearth')
-      a.select_all(data-kind='omniearth') Seleccionar Todos
+
+    
+    ._examples(data-kind='gases')
+      a.select_all(data-kind='gases') Seleccionar Todos
       ._examples--classes
-        ._examples--class._positive(data-name='baseball', data-kind='omniearth', data-realname='Baseball')
-          h4 Baseball
-          img(src='/images/bundles/omniearth/baseball-thumbnail.jpg', data-kind='omniearth', data-name='baseball')
-          button._positive(data-name='baseball') Seleccionar
-        ._examples--class._positive(data-name='cars', data-kind='omniearth', data-realname='Cars')
-          h4 Carros
-          img(src='/images/bundles/omniearth/cars-thumbnail.jpg', data-kind='omniearth', data-name='cars')
-          button._positive(data-name='cars') Seleccionar
-        ._examples--class._positive(data-name='golf', data-kind='omniearth', data-realname='Golf')
-          h4 Golf
-          img(src='/images/bundles/omniearth/golf-thumbnail.jpg', data-kind='omniearth', data-name='golf')
-          button._positive(data-name='golf') Seleccionar
-        ._examples--class._positive(data-name='tennis', data-kind='omniearth', data-realname='Tennis')
-          h4 Tenis
-          img(src='/images/bundles/omniearth/tennis-thumbnail.jpg', data-kind='omniearth', data-name='tennis')
-          button._positive(data-name='tennis') Seleccionar
-      ._examples--contact-sheet(data-kind='omniearth')
+        ._examples--class._positive(data-name='barniz', data-kind='gases', data-realname='barniz')
+          h4 Barniz
+          img(src='/images/bundles/explosivos/barniz-img.jpg', data-kind='gases', data-name='barniz')
+          button._positive(data-name='armas') Seleccionar
+
+        ._examples--class._positive(data-name='pintura', data-kind='gases', data-realname='pintura')
+          h4 Pintura
+          img(src='/images/bundles/explosivos/pintura-img.jpg', data-kind='gases', data-name='pintura')
+          button._positive(data-name='pintura') Seleccionar
+
+        ._examples--class._positive(data-name='encendedores', data-kind='gases', data-realname='encendedores')
+          h4 Encendedores
+          img(src='/images/bundles/explosivos/encendedores-img.jpg', data-kind='gases', data-name='encendedores')
+          button._positive(data-name='encendedores') Seleccionar
+
+        ._examples--class._positive(data-name='cintas', data-kind='gases', data-realname='cintas')
+          h4 Cintas Adhesivas
+          img(src='/images/bundles/explosivos/cintas-img.png', data-kind='gases', data-name='cintas')
+          button._positive(data-name='cintas') Seleccionar
+
+        ._examples--class._negative(data-name='negatives', data-kind='gases')
+          h4 Negativos:
+            br
+            | No son Explosivos
+          img(src='/images/bundles/explosivos/explosivos-no.jpg', data-kind='gases', data-name='negatives')
+          button._negative(data-name='negatives') Seleccionar
+      ._examples--contact-sheet(data-kind='explosivos')
         img
-      .license Images courtesy of IBM Watson partner 
-        a(class="base--a", href='http://omniearth.net/' target='_blank') OmniEarth.
+
+
+
     .train--row
       #formStateErrorMessage
       input.base--input._examples--input-name(type='text', placeholder='Name this class',required)
@@ -195,10 +185,7 @@
           span.icon.icon-reset
           button.base--a.train--reset-button.icon-hyperlink--button.icon-hyperlink--button_BLANK(type='reset')
             | Reiniciar
-    .license
-      | Las imágenes utilizadas en esta demo están licenciadas bajo Creative Commons 2.0 &nbsp;
-      a.base--a(href='https://github.com/watson-developer-cloud/visual-recognition-nodejs/tree/master/attributions', target='_blank') aquí
-      | .
+    
     .loading.train--loading
       .loader-container
         svg.loader(viewBox='25 25 50 50')
