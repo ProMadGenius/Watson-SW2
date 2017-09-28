@@ -20,7 +20,7 @@ var visualRecognition = watson.visual_recognition({
 
 // we could embed the expected category into the filename, but then someone might think the service was cheating. so, this will do for now.
 var testImages = {
-    // this maps to public/images/bundles/dogs/test/{index}.jpg
+    
   dogs: [
     'husky',
     'negatives',
@@ -29,6 +29,15 @@ var testImages = {
     'beagle',
     'goldenretriever',
     'husky' // same as 0 except with wrong proportions
+  ],
+  explosivos: [
+    'armas',
+    'explosivo',
+    'granadas',
+    'pirotecnico',
+    'granadas',
+    'armas',
+    'explosivo' // same as 0 except with wrong proportions
   ],
   fruits: [
     'peach',

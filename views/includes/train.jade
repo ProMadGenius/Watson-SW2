@@ -10,10 +10,6 @@
         ._training--example.clickable(data-kind='explosivos')
           h3 Explosivos
           img(src='/images/bundles/explosivos/explosivos.jpg')
-
-        ._training--example.clickable(data-kind='gases')
-          h3 Gases
-          img(src='/images/bundles/gases-comprimidos/gases-comprimidos.jpg')
         ._training--example.clickable(data-kind='dogs')
           h3 Razas de Perros
           img(src='/images/bundles/dogs/thumbnail.jpg')
@@ -75,7 +71,40 @@
 
 
   div._demo--container
-    ._examples(data-kind='dogs')
+  ._examples(data-kind='explosivos')
+      a.select_all(data-kind='explosivos') Seleccionar Todos
+      ._examples--classes
+        ._examples--class._positive(data-name='armas', data-kind='explosivos', data-realname='Armas')
+          h4 Armas
+          img(src='/images/bundles/explosivos/armas-img.jpg', data-kind='explosivos', data-name='armas')
+          button._positive(data-name='armas') Seleccionar
+
+        ._examples--class._positive(data-name='explosivo', data-kind='explosivos', data-realname='Explosivo')
+          h4 Explosivo
+          img(src='/images/bundles/explosivos/explosivos-img.jpg', data-kind='explosivos', data-name='explosivo')
+          button._positive(data-name='explosivo') Seleccionar
+
+        ._examples--class._positive(data-name='granadas', data-kind='explosivos', data-realname='Granadas')
+          h4 Granadas
+          img(src='/images/bundles/explosivos/granadas-img.jpg', data-kind='explosivos', data-name='granadas')
+          button._positive(data-name='granadas') Seleccionar
+
+        ._examples--class._positive(data-name='pirotecnico', data-kind='explosivos', data-realname='Pirotecnico')
+          h4 Pirotécnicos
+          img(src='/images/bundles/explosivos/pirotecnico-img.png', data-kind='explosivos', data-name='pirotecnico')
+          button._positive(data-name='pirotecnico') Seleccionar
+
+        ._examples--class._negative(data-name='negatives', data-kind='explosivos')
+          h4 Negativos:
+            br
+            | No son Explosivos
+          img(src='/images/bundles/explosivos/explosivos-no.jpg', data-kind='explosivos', data-name='negatives')
+          button._negative(data-name='negatives') Seleccionar
+      ._examples--contact-sheet(data-kind='explosivos')
+        img
+
+
+  ._examples(data-kind='dogs')
       a.select_all(data-kind='dogs') Seleccionar Todos
       ._examples--classes
         ._examples--class._positive(data-name='goldenretriever', data-kind='dogs', data-realname='Golden Retriever')
@@ -102,74 +131,6 @@
           button._negative(data-name='negatives') Seleccionar
       ._examples--contact-sheet(data-kind='dogs')
         img
-    
-    
-    ._examples(data-kind='explosivos')
-      a.select_all(data-kind='explosivos') Seleccionar Todos
-      ._examples--classes
-        ._examples--class._positive(data-name='armas', data-kind='explosivos', data-realname='armas')
-          h4 Armas
-          img(src='/images/bundles/explosivos/armas-img.jpg', data-kind='explosivos', data-name='armas')
-          button._positive(data-name='armas') Seleccionar
-
-        ._examples--class._positive(data-name='explosivos', data-kind='explosivos', data-realname='explosivos')
-          h4 Explosivos
-          img(src='/images/bundles/explosivos/explosivos-img.jpg', data-kind='explosivos', data-name='explosivos')
-          button._positive(data-name='explosivos') Seleccionar
-
-        ._examples--class._positive(data-name='granadas', data-kind='explosivos', data-realname='granadas')
-          h4 Granadas
-          img(src='/images/bundles/explosivos/granadas-img.jpg', data-kind='explosivos', data-name='granadas')
-          button._positive(data-name='granadas') Seleccionar
-
-        ._examples--class._positive(data-name='pirotecnico', data-kind='explosivos', data-realname='pirotecnico')
-          h4 Pirotécnicos
-          img(src='/images/bundles/explosivos/pirotecnico-img.png', data-kind='explosivos', data-name='pirotecnico')
-          button._positive(data-name='pirotecnico') Seleccionar
-
-        ._examples--class._negative(data-name='negatives', data-kind='explosivos')
-          h4 Negativos:
-            br
-            | No son Explosivos
-          img(src='/images/bundles/explosivos/explosivos-no.jpg', data-kind='explosivos', data-name='negatives')
-          button._negative(data-name='negatives') Seleccionar
-      ._examples--contact-sheet(data-kind='explosivos')
-        img
-
-    
-    ._examples(data-kind='gases')
-      a.select_all(data-kind='gases') Seleccionar Todos
-      ._examples--classes
-        ._examples--class._positive(data-name='barniz', data-kind='gases', data-realname='barniz')
-          h4 Barniz
-          img(src='/images/bundles/explosivos/barniz-img.jpg', data-kind='gases', data-name='barniz')
-          button._positive(data-name='armas') Seleccionar
-
-        ._examples--class._positive(data-name='pintura', data-kind='gases', data-realname='pintura')
-          h4 Pintura
-          img(src='/images/bundles/explosivos/pintura-img.jpg', data-kind='gases', data-name='pintura')
-          button._positive(data-name='pintura') Seleccionar
-
-        ._examples--class._positive(data-name='encendedores', data-kind='gases', data-realname='encendedores')
-          h4 Encendedores
-          img(src='/images/bundles/explosivos/encendedores-img.jpg', data-kind='gases', data-name='encendedores')
-          button._positive(data-name='encendedores') Seleccionar
-
-        ._examples--class._positive(data-name='cintas', data-kind='gases', data-realname='cintas')
-          h4 Cintas Adhesivas
-          img(src='/images/bundles/explosivos/cintas-img.png', data-kind='gases', data-name='cintas')
-          button._positive(data-name='cintas') Seleccionar
-
-        ._examples--class._negative(data-name='negatives', data-kind='gases')
-          h4 Negativos:
-            br
-            | No son Explosivos
-          img(src='/images/bundles/explosivos/explosivos-no.jpg', data-kind='gases', data-name='negatives')
-          button._negative(data-name='negatives') Seleccionar
-      ._examples--contact-sheet(data-kind='explosivos')
-        img
-
-
 
     .train--row
       #formStateErrorMessage

@@ -1,8 +1,6 @@
 let classifierNameMapping = {};
+classifierNameMapping.explosivos = new Set(['armas', 'explosivo', 'granadas', 'pirotecnico']);
 classifierNameMapping.dogs = new Set(['goldenretriever', 'husky', 'dalmatian', 'beagle']);
-classifierNameMapping.insurance = new Set(['brokenwinshield', 'flattire','motorcycleaccident','vandalism']);
-classifierNameMapping.moleskine = new Set(['journaling','landscape','notebook','portrait']);
-classifierNameMapping.omniearth = new Set(['baseball','cars','golf','tennis']);
 
 /**
  * this function takes a list of class names and a dictionary of

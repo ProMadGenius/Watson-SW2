@@ -345,37 +345,10 @@ $(document).ready(function() {
 
   function lookupName(token) {
     return {
-      moleskine: 'Moleskine Types',
-      dogs: 'Dog Breeds',
-      insurance: 'Insurance Claims',
-      omniearth: 'Satellite Imagery'
+      explosivos: 'explosivos',
+      dogs: 'Dog Breeds'
     }[token];
   }
-
-  // function lookupClassiferRealNameMap() {
-  //   var classifierNameMapping = {};
-  //   classifierNameMapping.dogs = {};
-  //   classifierNameMapping.dogs.goldenretriever = 'Golden Retriever';
-  //   classifierNameMapping.dogs.husky = 'Husky';
-  //   classifierNameMapping.dogs.dalmatian = 'Dalmatian';
-  //   classifierNameMapping.dogs.beagle = 'Beagle';
-  //   classifierNameMapping.insurance = {};
-  //   classifierNameMapping.insurance.brokenwinshield = 'Broken Windshield';
-  //   classifierNameMapping.insurance.flattire = 'Flat Tire';
-  //   classifierNameMapping.insurance.motorcycleaccident = 'Motorcycle Involved';
-  //   classifierNameMapping.insurance.vandalism = 'Vandalism';
-  //   classifierNameMapping.moleskine = {};
-  //   classifierNameMapping.moleskine.journaling = 'Journaling';
-  //   classifierNameMapping.moleskine.landscape = 'Landscape';
-  //   classifierNameMapping.moleskine.notebook = 'Notebook';
-  //   classifierNameMapping.moleskine.portrait = 'Portrait';
-  //   classifierNameMapping.omniearth = {};
-  //   classifierNameMapping.omniearth.baseball = 'Baseball';
-  //   classifierNameMapping.omniearth.cars = 'Cars';
-  //   classifierNameMapping.omniearth.golf = 'Golf';
-  //   classifierNameMapping.omniearth.tennis = 'Tennis';
-  //   return classifierNameMapping;
-  // }
 
   function getExamplesData() {
     return $('.showing div._examples--class__selected')
